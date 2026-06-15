@@ -1,7 +1,11 @@
+import Hero from '@/components/Hero';
+import Infoboxes from '@/components/Infoboxes';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Property Hunt</h1>
-    </div>
+    <>
+      <Hero />
+      <Infoboxes />
+    </>
   );
 }
