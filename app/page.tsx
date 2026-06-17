@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import HomeProperties from '@/components/HomeProperties';
 import Infoboxes from '@/components/Infoboxes';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Infoboxes />
+      <HomeProperties />
     </>
   );
 }

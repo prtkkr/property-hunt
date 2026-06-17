@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className='text-sm text-gray-500 mt-2 md:mt-24'>
+            <p className='text-sm text-gray-500 mt-2 md:mt-2'>
               &copy; {currentYear} Property Hunt. All rights reserved.
             </p>
           </div>
