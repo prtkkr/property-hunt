@@ -6,11 +6,13 @@ import Property from "@/models/Property";
 
 const HomeProperties = async () => {
   await connectDB();
-  const recentProperties = await Property.find({})
+  const recentProperties = (await Property.find({})
     .sort({ createdAt: -1 })
     .limit(3)
-    .lean();
-  //
+    .lean()).map((property) => ({
+      ...property,
+      _id: property._id?.toString?.() ?? property._id,
+    }));
   return (
     <>
       <section className="px-4 py-6">

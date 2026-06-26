@@ -5,7 +5,10 @@ import Property from '@/models/Property';
 
 const Properties = async() => {
   await connectDB();
-  const properties = await Property.find({}).lean();
+  const properties = (await Property.find({}).lean()).map((property) => ({
+    ...property,
+    _id: property._id?.toString?.() ?? property._id,
+  }));  
 
   return (
     <section className='px-4 py-6'>
